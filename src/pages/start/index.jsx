@@ -4,8 +4,9 @@ import DefaultButton from "../../components/common/defaultButton";
 import LifeStatus from "../../components/common/lifeStatus";
 import { useNavigation } from "@react-navigation/native";
 export default function Start(){
+    const navigation = useNavigation();
     const handleNavAppExplanation = () => {
-        console.log("Testando o clique do botão")
+        navigation.navigate("AppExplanation");
     };
 
     return(
