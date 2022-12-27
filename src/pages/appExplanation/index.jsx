@@ -1,10 +1,14 @@
+import { useNavigation } from "@react-navigation/native";
 import React from "react";
-import { Text, View, StyleSheet, ScrollView } from "react-native";
+import { Text, View, StyleSheet, ScrollView, handleNavHome } from "react-native";
+
 import DefaultButton from "../../components/common/defaultButton";
 import ExplanationCard from "../../components/Explanation/explanationCard";
+
 export default function AppExplanation(){
-    function handleSetShowHome(){
-        console.log("Botão Home");
+    const navigation = useNavigation();
+    function handleNavHome(){
+        navigation.navigate("Home");
     }
     return(
         <View style={styles.container}>
@@ -22,7 +26,7 @@ export default function AppExplanation(){
                     </Text>
                     <DefaultButton 
                         buttonText={"Continuar"}
-                        handlePress={handleSetShowHome}
+                        handlePress={handleNavHome}
                         width={250}
                         height={45}
                     />

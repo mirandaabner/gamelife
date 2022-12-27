@@ -52,7 +52,7 @@ export default function ExplanationCard(){
 const styles = StyleSheet.create({
     container:{
         backgroundColor: "#151515",
-        with: 350,
+        width: 350,
         borderRadius: 25,
         padding: 20,
     },
