@@ -2,8 +2,12 @@ import React from "react";
 import { Text, TouchableOpacity, View, StyleSheet } from "react-native";
 
 export default function EditHabit({ habit, frequency, habitArea, checkColor }) {
-  function handleEdit() {}
-  function handleCheck() {}
+  function handleEdit() {
+    console.log("botão editar clicado");
+  }
+  function handleCheck() {
+    console.log(`botão check: ${habitArea}`);
+  }
 
   return (
     <View>
@@ -15,7 +19,6 @@ export default function EditHabit({ habit, frequency, habitArea, checkColor }) {
         <View style={styles.habitText}>
           <Text style={styles.habitTitle}>{habit}</Text>
           <Text style={styles.habitFrequency}>{frequency}</Text>
-          <Text style={styles.habitFrequency}>{habitArea}</Text>
         </View>
         <TouchableOpacity
           style={[styles.check, { borderColor: checkColor }]}
@@ -35,7 +38,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     flexDirection: "row",
     alignItems: "center",
-    justfyContent: "space-between",
+    justifyContent: "space-between",
   },
   habitTitle: {
     color: "white",
@@ -49,6 +52,5 @@ const styles = StyleSheet.create({
     height: 20,
     borderWidth: 1,
     borderRadius: 10,
-    borderColor: "white",
   },
 });

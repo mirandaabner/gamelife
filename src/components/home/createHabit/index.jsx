@@ -2,7 +2,9 @@ import React from "react";
 import { TouchableOpacity, Text, StyleSheet, View } from "react-native";
 
 export default function CreateHabit({ habitArea, borderColor }) {
-  function handleCreate() {}
+  function handleCreate() {
+    console.log(`botão clicado: ${habitArea}`);
+  }
 
   return (
     <View>
@@ -12,7 +14,7 @@ export default function CreateHabit({ habitArea, borderColor }) {
         onPress={handleCreate}
       >
         <Text style={styles.habitTitle}>
-          Adcionar meta {habitArea === "Mente" ? "da" : "do"}{habitArea}
+          Adcionar meta {habitArea === "Mente" ? "da " : "do "}{habitArea}
         </Text>
       </TouchableOpacity>
     </View>
