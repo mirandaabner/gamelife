@@ -15,7 +15,7 @@ export default function ExplanationCard(){
                     style={styles.icon}
                 />
                 <Text style={styles.description}>
-                    <Text style={styles.mind}>Mente: </Text> Hábitos para melhorar sua Inteligência
+                    <Text style={styles.mind}>Mente: </Text> Hábitos para melhorar sua {"\n"}Inteligência
                 </Text>
             </View>
             <View style={styles.explanationContainer}>

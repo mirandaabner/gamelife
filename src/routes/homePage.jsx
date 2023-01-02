@@ -1,14 +1,12 @@
-import { NavigationContainer, StackActions } from "@react-navigation/native";
+import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-
-import Start from "../pages/start";
 import AppExplanation from "../pages/appExplanation";
-import Home from "../pages/home";
 import HabitPage from "../pages/habitPages";
+import Home from "../pages/home";
 
-const Stack = createNativeStackNavigator();
+const Stack = createNativeStackNavigator(); //manipula a navegção
 
-export default function AllPages() {
+export default function HomePage() {
   return (
     <NavigationContainer>
       <Stack.Navigator
@@ -16,10 +14,9 @@ export default function AllPages() {
           headerShown: false,
         }}
       >
-        <Stack.Screen name="Start" component={Start} />
-        <Stack.Screen name="AppExplanation" component={AppExplanation}/>
-        <Stack.Screen name="Home" component={Home}/>
+        <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="HabitPage" component={HabitPage} />
+        <Stack.Screen name="AppExplanation" component={AppExplanation} />
       </Stack.Navigator>
     </NavigationContainer>
   );
